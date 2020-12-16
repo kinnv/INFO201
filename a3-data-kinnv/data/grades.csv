@@ -1,0 +1,6 @@
+"first_names","math_grades","spanish_grades","grade_diff","better_at_math"
+"Kin",100,78,22,TRUE
+"Alex",0,100,-100,FALSE
+"Alan",75,50,25,TRUE
+"Andrew",80,60,20,TRUE
+"Mercedes",95,90,5,TRUE
