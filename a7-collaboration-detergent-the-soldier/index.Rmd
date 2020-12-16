@@ -1,0 +1,54 @@
+---
+title: "Index"
+author: "Kin L. Vong, Connor Voelk, Yan Zhe Ong, Andrew Katz"
+date: "5/24/2019"
+output: html_document
+---
+
+```{r setup, include=FALSE, echo=F}
+knitr::opts_chunk$set(echo = TRUE)
+source('map1.R')
+source('map2.R')
+source('summary.R')
+summaryStats <- describeData(data)
+```
+
+#Introduction
+Our group looked at recent U.S. election data, and then found summary statistics and made maps for it. The summary statsitics have to do with the overall numbers from the elections (total voters) and the uniqness of the states and counties. Our maps focused on which parties certain areas of the country voted for in a certain election. Our data did not incldue any numbers for the state of Alaska.
+
+#Summary
+We have data available for the 2008, 2012, and 2016 elections. We can see that the total votes from the 2008 election are `r prettyNum(summaryStats$total2008, big.mark = ',', scientific = FALSE)`, for 2012 the total is `r prettyNum(summaryStats$total2012, big.mark = ',', scientific = FALSE)` and `r prettyNum(summaryStats$total2016, big.mark = ',', scientific = FALSE)` total votes for the 2016 election. There really is no trend here, but it is an interesting takeaway that the largest of this sample is 2008, while 2012's is the minimum. Out of `r prettyNum(summaryStats$counties, big.mark = ',', scientific = FALSE)` counties, there are `r prettyNum(summaryStats$uniqueCounties, big.mark = ',', scientific = FALSE)` unique ones. Out of the 50 states there are `r prettyNum(summaryStats$uniqueStates, big.mark = ',', scientific = FALSE)` unique states that vote differently than the other.
+
+
+
+# Maps
+##2016 Republican vs. Democratic Vote Difference
+```{r, echo=F}
+gop_2016_data %>%
+  ggplot(aes(long, lat)) +
+  geom_polygon(aes(group = group, fill = voting_differences)) +
+  coord_map("albers",  at0 = 45.5, lat1 = 29.5) +
+  scale_fill_continuous(name = 'Vote difference') +
+  labs(title = 'Republican versus Democratic Vote Differences in 2016',
+       subtitle = 'Data from US Department of Agriculture Economic Research Service',
+       x = 'Longitude',
+       y = 'Latitude')
+knitr::opts_chunk$set(fig.width=12, fig.height=8) 
+```
+
+This map shows the voting difference of each county in the country. The darker the color of the county the more differnece to the democratic side. The lighter the color of the county shows less diference.
+
+##2008 Amount of Republican Voters in County
+```{r, echo=F}
+gop_2008_data %>% ggplot(aes(long, lat)) +
+  geom_polygon(aes(group = group, fill = gop_2008)) +
+  coord_map("albers",  at0 = 45.5, lat1 = 29.5) +
+  scale_fill_continuous(name = 'Number of GOP Voters by County (2008)') +
+  labs(title = 'Number of GOP Voters per County (2008)',
+       subtitle = 'Data from US Department of Agriculture Economic Research Service',
+       x = 'Longitude',
+       y = 'Latitude')
+knitr::opts_chunk$set(fig.width=12, fig.height=8) 
+```
+
+This map shows the total amount of people in each county that voted for the Republican candidate. The lighter the color the more people voted for the republican candidate in that county.
