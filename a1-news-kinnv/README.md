@@ -2,7 +2,7 @@
 
 Lee Seung-Hyun, better known as Seungri of Big Bang, a popular and iconic Korean boy band, has set off a cascade of **investigations** on many other Korean idols after being charged with **sex bribery**. His investigation was caused by an assault on an average club goer at The Burning Sun by staff. The Burning Sun is a nightclub located in Gangnam where Seungri was an executive director for.
 
-#So, what makes this scandal any different? This isn't just cynicism. What we see in the headlines is only the tip of the iceberg. These stories don't capture the pervasive power inequality between men and women in countless, unseen sectors of Korean society.
+So, what makes this scandal any different? This isn't just cynicism. What we see in the headlines is only the tip of the iceberg. These stories don't capture the pervasive power inequality between men and women in countless, unseen sectors of Korean society.
 
 ![Seungri](/imgs/seungri.jpg)
 
