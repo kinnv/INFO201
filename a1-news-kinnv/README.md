@@ -4,7 +4,7 @@ Lee Seung-Hyun, better known as Seungri of Big Bang, a popular and iconic Korean
 
 So, what makes this scandal any different? This isn't just cynicism. What we see in the headlines is only the tip of the iceberg. These stories don't capture the pervasive power inequality between men and women in countless, unseen sectors of Korean society.
 
-![Seungri](/imgs/seungri.jpg)
+![Seungri](imgs/seungri.jpg)
 
 Additional Information:
 
